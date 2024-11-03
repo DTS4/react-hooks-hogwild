@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
-import 'semantic-ui-css/semantic.min.css'
+import $ from 'jquery'; 
 import './index.css';
+
+window.$ = $;
+window.jQuery = $;
 
 ReactDOM.render(<App />, document.getElementById('root'));

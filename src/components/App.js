@@ -4,7 +4,6 @@ import Hogs from "../porkers_data";
 import HogList from "./HogList/HogList";
 import FilterSort from "./FilterSort/FilterSort";
 import AddHogForm from "./AddHogForm/AddHogForm";
-import { Container } from 'semantic-ui-css' 
 
 function App() {
 	const [hogsData, setHogsData] = useState(Hogs);
@@ -21,7 +20,7 @@ function App() {
 	};
 
 	return (
-		<Container className="App">
+		<div className="App">
 			<Nav />
 			<AddHogForm onAddHog={addNewHog} />
 			<FilterSort setFilter={setFilter} setSortBy={setSortBy} />
@@ -32,7 +31,7 @@ function App() {
 				hiddenHogs={hiddenHogs}
 				onHideHog={handleHideHog}
 			/>
-		</Container>
+		</div>
 	);
 }
 

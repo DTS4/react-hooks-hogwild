@@ -1,43 +1,58 @@
 .addHogForm {
-	display: flex;
-	flex-direction: column;
-	margin: 20px;
-	padding: 20px;
-	border: 1px solid #ccc;
-	border-radius: 8px;
-	background-color: #f9f9f9;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 }
 
-.field {
-	margin-bottom: 15px;
+.addHogForm input[type="text"],
+.addHogForm input[type="number"],
+.addHogForm input[type="url"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s;
 }
 
-.field label {
-	margin-bottom: 5px;
-	font-weight: bold;
+.addHogForm input:focus {
+    border-color: #3498db;
+    outline: none;
 }
 
-.field input[type="text"],
-.field input[type="number"] {
-	padding: 8px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	width: 100%;
+.addHogForm label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
 }
 
-.field input[type="checkbox"] {
-	margin-left: 10px;
+.addHogForm .checkboxWrapper {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
 }
 
-.submitButton {
-	background-color: #4CAF50;
-	color: white;
-	padding: 10px;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
+.addHogForm input[type="checkbox"] {
+    margin-right: 10px;
 }
 
-.submitButton:hover {
-	background-color: #45a049;
+.addHogForm .submitButton {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.addHogForm .submitButton:hover {
+    background-color: #2980b9;
 }
