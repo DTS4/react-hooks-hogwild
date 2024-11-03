@@ -2,6 +2,9 @@
 
 ## React Week 1 Project
 
+## Live Demo
+https://visionary-sfogliatella-eb8931.netlify.app/
+
 ## Deliverables
 
 - _When the app first loads_, display a tile for each hog in the
