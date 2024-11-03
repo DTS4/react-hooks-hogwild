@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Nav from "./Nav";
 import Hogs from "../porkers_data";
-import HogList from "./HogList";
-import FilterSort from "./FilterSort";
-import AddHogForm from "./AddHogForm";
+import HogList from "./HogList/HogList";
+import FilterSort from "./FilterSort/FilterSort";
+import AddHogForm from "./AddHogForm/AddHogForm";
+import { Container } from 'semantic-ui-css' 
 
 function App() {
 	const [hogsData, setHogsData] = useState(Hogs);
@@ -20,7 +21,7 @@ function App() {
 	};
 
 	return (
-		<div className="App">
+		<Container className="App">
 			<Nav />
 			<AddHogForm onAddHog={addNewHog} />
 			<FilterSort setFilter={setFilter} setSortBy={setSortBy} />
@@ -31,7 +32,7 @@ function App() {
 				hiddenHogs={hiddenHogs}
 				onHideHog={handleHideHog}
 			/>
-		</div>
+		</Container>
 	);
 }
 

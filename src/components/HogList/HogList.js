@@ -1,8 +1,9 @@
 import React from "react";
-import Hog from "./Hog";
+import Hog from "../Hog/Hog";
+import { Grid } from 'semantic-ui-react';
 
 function HogList({ hogs, filter, sortBy, hiddenHogs, onHideHog }) {
-		const visibleHogs = hogs
+	const visibleHogs = hogs
 		.filter((hog) => !hiddenHogs.includes(hog.name))  
 		.filter((hog) => (filter === "greased" ? hog.greased : true)) 
 		.sort((a, b) => {
@@ -12,13 +13,13 @@ function HogList({ hogs, filter, sortBy, hiddenHogs, onHideHog }) {
 		});
 
 	return (
-		<div className="ui grid container">
+		<Grid container>
 			{visibleHogs.map((hog) => (
-				<div key={hog.name} className="ui eight wide column">
+				<Grid.Column key={hog.name} width={4}>
 					<Hog hog={hog} onHide={onHideHog} />
-				</div>
+				</Grid.Column>
 			))}
-		</div>
+		</Grid>
 	);
 }
 
